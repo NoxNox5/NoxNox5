@@ -1,5 +1,3 @@
-<div align="center">
-  <img src="assets/profile.jpg" alt="Subhankar Tripathi" width="160" style="border-radius: 50%;" />
   <h1>Hey, I'm Subbu 👋</h1>
   <p><em>Technical Business Analyst · Data & Analytics · Dublin, Ireland</em></p>
 
