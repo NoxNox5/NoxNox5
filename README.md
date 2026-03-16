@@ -10,11 +10,11 @@
 
 ## About me
 
-I'm a Technical Business Analyst with around 5 years of experience across data analytics, operations, and system integrations. I've spent most of that time at the intersection of business and engineering — writing requirements that engineers actually find useful, building dashboards that get used past the first month, and generally trying to make data less painful for everyone involved.
+I'm a Technical Business Analyst with around 5 years of experience across data analytics, operations, and system integrations. I've spent most of that time at the intersection of business and engineering, writing requirements that engineers actually find useful, building dashboards that get used past the first month, and generally trying to make data less painful for everyone involved.
 
-I moved to Ireland in 2023 and just finished my MSc in Electronic and Computer Technology (IoT) at DCU, where my thesis hit 83% accuracy on breast cancer detection using CNN architectures. Before that I was at Infoblox in Bangalore doing demand planning analytics, and before *that* a mix of logistics, marketing analytics, and early-stage startup work.
+I moved to Ireland in 2023 and just finished my MSc in Electronic and Computer Technology (IoT) at DCU, where my thesis hit 83% accuracy on breast cancer detection using CNN architectures. Before that I was at Infoblox in Bangalore doing business analytics, and before that a mix of logistics, marketing analytics, and early-stage startup work.
 
-Right now I'm looking for roles in **Technical Business Analysis**, **Data Analytics / BI**, or anything that leans into ML and analytical work. Open to Dublin-based or remote.
+Right now I'm looking for roles in Technical Business Analysis, Data Analytics / BI, or anything that leans into ML and analytical work. Open to Dublin-based or remote.
 
 ---
 
