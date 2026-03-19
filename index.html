@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="auto">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,8 +24,55 @@
       --border:       #e2e8f0;
       --border-hover: #93c5fd;
       --tag-bg:       #f1f5f9;
+      --nav-bg:       rgba(248, 249, 251, 0.94);
+      --about-grad:   linear-gradient(160deg, #ffffff 0%, #f0f6ff 100%);
+      --contact-grad: linear-gradient(160deg, #f0f6ff 0%, #ffffff 100%);
       --shadow-sm:    0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
       --shadow-md:    0 4px 16px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.04);
+    }
+
+    [data-theme="dark"] {
+      --bg:           #0d1117;
+      --surface:      #161b22;
+      --surface-alt:  #21262d;
+      --text:         #e6edf3;
+      --text-2:       #c9d1d9;
+      --muted:        #8b949e;
+      --accent:       #58a6ff;
+      --accent-dark:  #79c0ff;
+      --accent-light: #0d1f2d;
+      --accent-mid:   #1f6feb;
+      --border:       #30363d;
+      --border-hover: #58a6ff;
+      --tag-bg:       #21262d;
+      --nav-bg:       rgba(13, 17, 23, 0.94);
+      --about-grad:   linear-gradient(160deg, #161b22 0%, #0d1f2d 100%);
+      --contact-grad: linear-gradient(160deg, #0d1f2d 0%, #161b22 100%);
+      --shadow-sm:    0 1px 3px rgba(0,0,0,.3), 0 1px 2px rgba(0,0,0,.2);
+      --shadow-md:    0 4px 16px rgba(0,0,0,.4), 0 2px 4px rgba(0,0,0,.3);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html[data-theme="auto"] {
+        --bg:           #0d1117;
+        --surface:      #161b22;
+        --surface-alt:  #21262d;
+        --text:         #e6edf3;
+        --text-2:       #c9d1d9;
+        --muted:        #8b949e;
+        --accent:       #58a6ff;
+        --accent-dark:  #79c0ff;
+        --accent-light: #0d1f2d;
+        --accent-mid:   #1f6feb;
+        --border:       #30363d;
+        --border-hover: #58a6ff;
+        --tag-bg:       #21262d;
+        --nav-bg:       rgba(13, 17, 23, 0.94);
+        --about-grad:   linear-gradient(160deg, #161b22 0%, #0d1f2d 100%);
+        --contact-grad: linear-gradient(160deg, #0d1f2d 0%, #161b22 100%);
+        --shadow-sm:    0 1px 3px rgba(0,0,0,.3), 0 1px 2px rgba(0,0,0,.2);
+        --shadow-md:    0 4px 16px rgba(0,0,0,.4), 0 2px 4px rgba(0,0,0,.3);
+      }
     }
 
     html { scroll-behavior: smooth; }
@@ -36,6 +83,7 @@
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      transition: background 0.2s, color 0.2s;
     }
 
     body::before {
@@ -48,7 +96,7 @@
     nav {
       position: sticky;
       top: 0;
-      background: rgba(248, 249, 251, 0.94);
+      background: var(--nav-bg);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
@@ -87,6 +135,20 @@
     }
     nav a:hover { color: var(--text); background: var(--tag-bg); }
 
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.3rem 0.5rem;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+      flex-shrink: 0;
+    }
+    .theme-toggle:hover { color: var(--text); border-color: var(--border-hover); background: var(--tag-bg); }
+
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -97,7 +159,7 @@
 
     #about {
       padding-top: 5.5rem;
-      background: linear-gradient(160deg, #ffffff 0%, #f0f6ff 100%);
+      background: var(--about-grad);
       border-bottom: 1px solid var(--border);
     }
     .about-inner {
@@ -312,7 +374,7 @@
       font-size: 0.66rem;
       padding: 0.12rem 0.42rem;
       background: var(--accent-light);
-      color: var(--accent-dark);
+      color: var(--accent);
       border-radius: 4px;
       font-weight: 500;
     }
@@ -329,7 +391,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0;
     }
     .timeline-dot {
       width: 9px;
@@ -380,6 +441,11 @@
       border: 1px solid #fde68a;
       vertical-align: middle;
       letter-spacing: 0.01em;
+    }
+    [data-theme="dark"] .badge {
+      background: #2d2000;
+      color: #fcd34d;
+      border-color: #78350f;
     }
     .job-desc {
       font-size: 0.865rem;
@@ -454,7 +520,7 @@
     }
 
     #contact {
-      background: linear-gradient(160deg, #f0f6ff 0%, #ffffff 100%);
+      background: var(--contact-grad);
       border-top: 1px solid var(--border);
       text-align: center;
     }
@@ -481,6 +547,14 @@
       background: var(--surface);
     }
 
+    @media (prefers-color-scheme: dark) {
+      html[data-theme="auto"] .badge {
+        background: #2d2000;
+        color: #fcd34d;
+        border-color: #78350f;
+      }
+    }
+
     @media (max-width: 620px) {
       .about-inner { flex-direction: column-reverse; gap: 1.5rem; }
       .profile-photo, .profile-photo-wrap { width: 90px; height: 90px; font-size: 1.75rem; }
@@ -504,6 +578,7 @@
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">☀︎</button>
   </div>
 </nav>
 
@@ -520,11 +595,11 @@
           Dublin, Ireland
         </p>
 
-        <p>I work at the intersection of messy data and the teams who need to act on it. My background is in analytics and business analysis — building dashboards, cleaning pipelines, making sure the numbers executives see are actually right.</p>
+        <p>I work at the intersection of messy data and the teams who need to act on it — building dashboards, cleaning pipelines, making sure the numbers executives see are actually right.</p>
 
-        <p>My MSc at DCU took some unexpected turns. Breast cancer detection with CNNs. ECG anomaly detection firmware on an MSP432. Mars surface clustering from NASA rover images. The common thread was working with unclean, unlabelled data and figuring out what to do with it anyway.</p>
+        <p>My MSc at DCU went in some unexpected directions: breast cancer detection with CNNs, ECG firmware on an MSP432, Mars surface clustering from NASA rover images. The common thread was working with unclean, unlabelled data and figuring out what to do with it anyway.</p>
 
-        <p>At Infoblox I spent two years untangling 60K+ accounts in Salesforce and cutting executive reporting cycles by 60%. Won a company-wide WoW Award in 2020 for the automation work — the only company award I've ever received, and I'm still a bit proud of it.</p>
+        <p>At Infoblox I spent two years untangling 60K+ accounts in Salesforce and cutting executive reporting cycles by 60%. Won a company-wide WoW Award in 2020 — the only one I've ever received, and I'm still a bit proud of it.</p>
 
         <div class="about-links">
           <a href="https://github.com/NoxNox5" class="btn-primary" target="_blank">GitHub</a>
@@ -605,7 +680,7 @@
           </div>
           <h3>Breast cancer detection</h3>
         </div>
-        <p>Compared CNN, VGG16, and ResNet50 on histopathology images. ResNet50 reached 83% accuracy. Transfer learning and model pruning cut inference time by 25%.</p>
+        <p>CNN vs VGG16 vs ResNet50 on histopathology images. ResNet50 hit 83%. Transfer learning and pruning cut inference time by 25%.</p>
         <div class="stack-tags">
           <span class="stack-tag">Python</span>
           <span class="stack-tag">TensorFlow</span>
@@ -621,7 +696,7 @@
           </div>
           <h3>ECG anomaly detection</h3>
         </div>
-        <p>End-to-end cardiac monitor: AD8232 sensor wired to MSP432, Pan-Tompkins QRS detection in firmware, MQTT stream to ThingsBoard. 85% accuracy on ventricular premature contractions.</p>
+        <p>AD8232 sensor → MSP432, Pan-Tompkins QRS detection in firmware, MQTT stream to ThingsBoard. 85% accuracy on ventricular premature contractions.</p>
         <div class="stack-tags">
           <span class="stack-tag">C/C++</span>
           <span class="stack-tag">MSP432</span>
@@ -637,28 +712,12 @@
           </div>
           <h3>Mars surface classification</h3>
         </div>
-        <p>EfficientNetB0 features and K-Means clustering on NASA Curiosity rover images. No labels, no ground truth — just trying to see if terrain clusters naturally. It mostly does.</p>
+        <p>EfficientNetB0 + K-Means on NASA Curiosity images. No labels, no ground truth — just checking if terrain clusters naturally. It mostly does.</p>
         <div class="stack-tags">
           <span class="stack-tag">Python</span>
           <span class="stack-tag">EfficientNetB0</span>
           <span class="stack-tag">K-Means</span>
           <span class="stack-tag">PCA</span>
-        </div>
-      </a>
-
-      <a href="https://github.com/NoxNox5/supply-chain-analytics" target="_blank" class="project-card">
-        <div class="project-card-header">
-          <div class="project-icon">
-            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h3>Supply chain analytics</h3>
-        </div>
-        <p>Analytics pipeline from my time at Infoblox: Salesforce-to-Power BI dashboards, CRM governance across 60K+ accounts, demand forecasting. Won a WoW Award for the automation.</p>
-        <div class="stack-tags">
-          <span class="stack-tag">Salesforce</span>
-          <span class="stack-tag">Power BI</span>
-          <span class="stack-tag">SQL</span>
-          <span class="stack-tag">ETL</span>
         </div>
       </a>
 
@@ -669,7 +728,7 @@
           </div>
           <h3>Lightweight cryptography</h3>
         </div>
-        <p>PRESENT-80 and AES-128 implemented from scratch in Python. PRESENT is designed for constrained IoT devices — useful to see exactly what it trades away to get there.</p>
+        <p>PRESENT-80 and AES-128 from scratch in Python. PRESENT is built for constrained IoT devices — useful to see exactly what it trades away to get there.</p>
         <div class="stack-tags">
           <span class="stack-tag">Python</span>
           <span class="stack-tag">PRESENT-80</span>
@@ -699,7 +758,7 @@
             </div>
             <span class="job-period">Bangalore &middot; Feb 2020 – Apr 2022</span>
           </div>
-          <p class="job-desc">Built Salesforce-to-Power BI dashboards that cut executive reporting cycles by 60% and gave demand teams real-time visibility into supply and order data. The bigger project was cleaning 60K+ accounts: governance rules, audit pipelines, deduplication — getting the underlying data into a state where you could actually trust it. Also wrote PRDs, BRDs, and process playbooks that Finance, Sales Ops, and Supply were all using by the time I left.</p>
+          <p class="job-desc">Built Salesforce-to-Power BI dashboards that cut executive reporting cycles by 60%. The bigger project was cleaning 60K+ accounts: governance rules, audit pipelines, deduplication — getting the data into a state you could actually trust. Also wrote PRDs, BRDs, and process playbooks that Finance, Sales Ops, and Supply were all using by the time I left.</p>
         </div>
       </div>
 
@@ -716,7 +775,7 @@
             </div>
             <span class="job-period">Bangalore &middot; Oct 2019 – Jan 2020</span>
           </div>
-          <p class="job-desc">Short engagement before joining Infoblox. Built anomaly detection models for marketing pipelines and KPI dashboards for SEO performance. Organic traffic roughly doubled over the period.</p>
+          <p class="job-desc">Short engagement before Infoblox. Anomaly detection for marketing pipelines, KPI dashboards for SEO performance. Organic traffic roughly doubled over the period.</p>
         </div>
       </div>
 
@@ -733,7 +792,7 @@
             </div>
             <span class="job-period">Remote &middot; Nov 2016 – Sep 2019</span>
           </div>
-          <p class="job-desc">Three years of supply chain analytics: anomaly detection reports for shipping bottlenecks, six-plus routing dashboards embedded in leadership reviews, standardised reporting formats across ops teams. My first real look at what it takes to make data usable for people who aren't data people.</p>
+          <p class="job-desc">Three years of supply chain analytics: anomaly detection for shipping bottlenecks, six-plus routing dashboards in leadership reviews, standardised reporting across ops teams. My first real look at making data usable for people who aren't data people.</p>
         </div>
       </div>
 
@@ -747,13 +806,13 @@
         <h3>MSc Electronic and Computer Technology (IoT)</h3>
         <p class="school">Dublin City University</p>
         <p class="period">Dublin, Ireland &middot; 2022 – 2025</p>
-        <p class="thesis">Thesis: Breast cancer detection using CNN, VGG, and ResNet architectures on histopathological images. 83% accuracy, 25% faster inference with transfer learning and model pruning.</p>
+        <p class="thesis">Thesis: Breast cancer detection using CNN, VGG, and ResNet on histopathological images. 83% accuracy, 25% faster inference with transfer learning and model pruning.</p>
       </div>
       <div class="edu-card">
         <h3>BEng Electrical &amp; Electronics Engineering</h3>
         <p class="school">Sai Vidya Institute of Technology (SVIT)</p>
         <p class="period">Bangalore, India &middot; 2012 – 2016</p>
-        <p class="thesis">Thesis: Wireless current collector monitoring system for Bangalore Metro. Real-time safety and position monitoring. 1st place thesis award.</p>
+        <p class="thesis">Thesis: Wireless current collector monitoring for Bangalore Metro. Real-time safety and position monitoring. 1st place thesis award.</p>
       </div>
     </div>
 
@@ -780,7 +839,7 @@
 <section id="contact">
   <div class="container">
     <h2>Get in touch</h2>
-    <p>Open to data, business analysis, and IoT roles. Happy to talk.</p>
+    <p>Open to data, business analysis, and IoT roles in Dublin. Happy to talk.</p>
     <div class="contact-links">
       <a href="mailto:subbu.tripathi.dcu@gmail.com" class="btn-primary">subbu.tripathi.dcu@gmail.com</a>
       <a href="https://www.linkedin.com/in/subhankar-tripathi" class="btn-secondary" target="_blank">LinkedIn</a>
@@ -790,6 +849,40 @@
 </section>
 
 <footer>Subhankar Tripathi &middot; Dublin, Ireland</footer>
+
+<script>
+  (function () {
+    var html = document.documentElement;
+    var btn = document.getElementById('themeToggle');
+
+    function isDark() {
+      var t = html.getAttribute('data-theme');
+      if (t === 'dark') return true;
+      if (t === 'light') return false;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+
+    function setTheme(dark) {
+      html.setAttribute('data-theme', dark ? 'dark' : 'light');
+      btn.textContent = dark ? '☀︎' : '☾';
+      try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch(e) {}
+    }
+
+    // Restore saved preference
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || saved === 'light') {
+        html.setAttribute('data-theme', saved);
+      }
+    } catch(e) {}
+
+    btn.textContent = isDark() ? '☀︎' : '☾';
+
+    btn.addEventListener('click', function () {
+      setTheme(!isDark());
+    });
+  })();
+</script>
 
 </body>
 </html>
