@@ -10,5 +10,19 @@
   },
   "compatibility_flags": [
     "nodejs_compat"
+ ]
+{
+  "routes": [
+    {
+      "pattern": "Subhankar-tripathi.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "Subbu.com",
+      "custom_domain": true
+    }
   ]
 }
+
+}
+
