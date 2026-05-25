@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Hey, I'm Subbu 👋</h1>
+  <h1>Hey, I'm Subhankar 👋</h1>
   <p><em>Technical Business Analyst · Data & Analytics · Dublin, Ireland</em></p>
 
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-subhankar--tripathi-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/subhankar-tripathi)
@@ -13,7 +13,7 @@
 
 I'm a Technical Business Analyst with around 5 years of experience across data analytics, operations, and system integrations. Most of that time has been at the intersection of business and engineering — writing requirements engineers actually find useful, building dashboards that get used past the first month, and making data less painful for everyone involved.
 
-I moved to Ireland in 2023 and just finished my MSc in Electronic and Computer Technology (IoT) at DCU, where my thesis hit 83% accuracy on breast cancer detection using CNN architectures. Before that I was at Infoblox in Bangalore doing business analytics, and before that a mix of logistics, marketing analytics, and early-stage startup work.
+I moved to Ireland in 2023, submitted my MSc thesis in 2024, and was awarded the MSc in Electronic and Computer Technology (IoT) at DCU in 2025. The thesis compared CNN, VGG, and ResNet (plus two CNN/VGG hybrid stacks) on histopathology images for breast-cancer prediction; the custom CNN was the best single architecture at 83% validation accuracy. Before DCU I was at Infoblox in Bengaluru doing business analytics, and before that a mix of logistics, marketing analytics, and early-stage startup work.
 
 Currently looking for roles in Technical Business Analysis, Data Analytics / BI, or anything that leans into ML and analytical work. Open to Dublin-based or remote.
 
@@ -54,7 +54,7 @@ Currently looking for roles in Technical Business Analysis, Data Analytics / BI,
 
 | Project | What it does | Stack |
 |---|---|---|
-| [🔬 Breast Cancer Detection](https://github.com/NoxNox5/breast-cancer-detection) | CNN-based histopathological image classifier, 83% accuracy | Python, TensorFlow, ResNet50, VGG16 |
+| [🔬 Breast cancer prediction](https://github.com/NoxNox5/breast-cancer-detection) | MSc thesis. Custom CNN + VGG + ResNet + hybrid stacks on BreaKHis. CNN best at 83%. | Python, TensorFlow, CNN, VGG16, ResNet50 |
 | [❤️ ECG Ventricular Detection](https://github.com/NoxNox5/ecg-ventricular-detection) | IoT cardiac monitor — Pan-Tompkins QRS detection + MQTT cloud alerts | C++, MSP432, MQTT, ThingsBoard |
 | [🔴 Mars Surface Classification](https://github.com/NoxNox5/mars-surface-classification) | CNN feature extraction + K-Means clustering on NASA Curiosity images | Python, EfficientNetB0, Scikit-learn |
 | [🔐 Lightweight Cryptography](https://github.com/NoxNox5/cryptography-implementations) | PRESENT-80 and AES-128 implemented from scratch | Python |
@@ -63,10 +63,11 @@ Currently looking for roles in Technical Business Analysis, Data Analytics / BI,
 
 ## A bit more
 
-- MSc, Electronic & Computer Technology (IoT) — Dublin City University, 2025
+- MSc, Electronic & Computer Technology (IoT), Dublin City University (thesis 2024, awarded 2025)
 - WoW Award at Infoblox (2020) for analytics automation impact
-- I write clear documentation — PRDs, BRDs, process playbooks — because good docs save everyone time
-- Originally from Bangalore, now based in Dublin
+- I write clear documentation (PRDs, BRDs, process playbooks) because good docs save everyone time
+- Originally from Bengaluru, now based in Dublin
+- Full portfolio: [portfolio.subhankar-tripathi.workers.dev](https://portfolio.subhankar-tripathi.workers.dev/)
 
 ---
 
