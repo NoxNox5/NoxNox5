@@ -67,7 +67,7 @@ Currently looking for roles in Technical Business Analysis, Data Analytics / BI,
 - WoW Award at Infoblox (2020) for analytics automation impact
 - I write clear documentation (PRDs, BRDs, process playbooks) because good docs save everyone time
 - Originally from Bengaluru, now based in Dublin
-- Full portfolio: [portfolio.subhankar-tripathi.workers.dev](https://portfolio.subhankar-tripathi.workers.dev/)
+- Full portfolio: [www.subhankartripathi.com](www.subhankartripathi.com)
 
 ---
 
